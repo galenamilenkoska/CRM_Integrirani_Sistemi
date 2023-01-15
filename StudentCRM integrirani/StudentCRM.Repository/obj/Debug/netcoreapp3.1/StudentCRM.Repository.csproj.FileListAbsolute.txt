@@ -1,0 +1,13 @@
+C:\Users\bobi\VS_Projects\StudentCRM integrirani\StudentCRM integrirani\StudentCRM.Repository\bin\Debug\netcoreapp3.1\StudentCRM.Repository.deps.json
+C:\Users\bobi\VS_Projects\StudentCRM integrirani\StudentCRM integrirani\StudentCRM.Repository\bin\Debug\netcoreapp3.1\StudentCRM.Repository.dll
+C:\Users\bobi\VS_Projects\StudentCRM integrirani\StudentCRM integrirani\StudentCRM.Repository\bin\Debug\netcoreapp3.1\StudentCRM.Repository.pdb
+C:\Users\bobi\VS_Projects\StudentCRM integrirani\StudentCRM integrirani\StudentCRM.Repository\bin\Debug\netcoreapp3.1\StudentCRM.Domain.dll
+C:\Users\bobi\VS_Projects\StudentCRM integrirani\StudentCRM integrirani\StudentCRM.Repository\bin\Debug\netcoreapp3.1\StudentCRM.Domain.pdb
+C:\Users\bobi\VS_Projects\StudentCRM integrirani\StudentCRM integrirani\StudentCRM.Repository\obj\Debug\netcoreapp3.1\StudentCRM.Repository.csproj.AssemblyReference.cache
+C:\Users\bobi\VS_Projects\StudentCRM integrirani\StudentCRM integrirani\StudentCRM.Repository\obj\Debug\netcoreapp3.1\StudentCRM.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bobi\VS_Projects\StudentCRM integrirani\StudentCRM integrirani\StudentCRM.Repository\obj\Debug\netcoreapp3.1\StudentCRM.Repository.AssemblyInfoInputs.cache
+C:\Users\bobi\VS_Projects\StudentCRM integrirani\StudentCRM integrirani\StudentCRM.Repository\obj\Debug\netcoreapp3.1\StudentCRM.Repository.AssemblyInfo.cs
+C:\Users\bobi\VS_Projects\StudentCRM integrirani\StudentCRM integrirani\StudentCRM.Repository\obj\Debug\netcoreapp3.1\StudentCRM.Repository.csproj.CoreCompileInputs.cache
+C:\Users\bobi\VS_Projects\StudentCRM integrirani\StudentCRM integrirani\StudentCRM.Repository\obj\Debug\netcoreapp3.1\StudentCRM.Repository.csproj.CopyComplete
+C:\Users\bobi\VS_Projects\StudentCRM integrirani\StudentCRM integrirani\StudentCRM.Repository\obj\Debug\netcoreapp3.1\StudentCRM.Repository.dll
+C:\Users\bobi\VS_Projects\StudentCRM integrirani\StudentCRM integrirani\StudentCRM.Repository\obj\Debug\netcoreapp3.1\StudentCRM.Repository.pdb
