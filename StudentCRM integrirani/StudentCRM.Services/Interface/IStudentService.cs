@@ -8,10 +8,10 @@ namespace StudentCRM.Services.Interface
     public interface IStudentService
     {
         List<Student> ListAll();
-        Student FindById(Guid? id);
+        Student FindById(int? id);
         void CreateNewStudent(Student s);
         void UpdateExistingStudent(Student s);
-        void DeleteStudent(Guid id);
+        void DeleteStudent(int id);
         Student FindByEmail(string email);
     }
 }

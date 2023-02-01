@@ -21,7 +21,7 @@ namespace StudentCRM.Services.Implementation
             return this.studentRepository.GetAll().ToList();
         }
 
-        public Student FindById(Guid? id)
+        public Student FindById(int? id)
         {
             return this.studentRepository.Get(id);
         }
@@ -36,7 +36,7 @@ namespace StudentCRM.Services.Implementation
             this.studentRepository.Update(s);
         }
 
-        public void DeleteStudent(Guid id)
+        public void DeleteStudent(int id)
         {
             var student = this.FindById(id);
             this.studentRepository.Delete(student);

@@ -22,7 +22,7 @@ namespace StudentCRM.Services.Implementation
             return this.subjectRepository.GetAll().ToList();
         }
 
-        public Subject FindById(Guid? id)
+        public Subject FindById(int? id)
         {
             return this.subjectRepository.Get(id);
         }
@@ -37,13 +37,13 @@ namespace StudentCRM.Services.Implementation
             this.subjectRepository.Update(s);
         }
 
-        public void DeleteSubject(Guid id)
+        public void DeleteSubject(int id)
         {
             var subject = this.FindById(id);
             this.subjectRepository.Delete(subject);
         }
 
-        public void UpdateExistingSubject(Guid id, string code, string subjectName)
+        public void UpdateExistingSubject(int id, string code, string subjectName)
         {
             throw new NotImplementedException();
         }

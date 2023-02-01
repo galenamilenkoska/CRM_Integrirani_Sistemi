@@ -38,11 +38,11 @@ namespace StudentCRM.Repository
                .ValueGeneratedOnAdd();
 
             builder.Entity<StudentSubject>()
-              .Property(z => z.studentSubjectId)
+              .Property(z => z.Id)
               .ValueGeneratedOnAdd();
 
             builder.Entity<ProfessorSubject>()
-              .Property(z => z.professorSubjectId)
+              .Property(z => z.Id)
               .ValueGeneratedOnAdd();
         }
     }

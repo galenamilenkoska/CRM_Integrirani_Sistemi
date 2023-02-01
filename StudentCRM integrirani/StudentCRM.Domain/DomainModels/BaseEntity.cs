@@ -6,6 +6,6 @@ namespace StudentCRM.Domain.DomainModels
 {
     public class BaseEntity
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
     }
 }

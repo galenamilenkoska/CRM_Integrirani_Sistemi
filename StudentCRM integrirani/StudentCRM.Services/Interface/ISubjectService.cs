@@ -8,10 +8,10 @@ namespace StudentCRM.Services.Interface
     public interface ISubjectService
     {
         List<Subject> ListAll();
-        Subject FindById(Guid? id);
+        Subject FindById(int? id);
         void CreateNewSubject(Subject s);
-        void UpdateExistingSubject(Guid id, String code, String subjectName);
-        void DeleteSubject(Guid id);
+        void UpdateExistingSubject(int id, String code, String subjectName);
+        void DeleteSubject(int id);
 
         
     }

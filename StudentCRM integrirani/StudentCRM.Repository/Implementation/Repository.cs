@@ -25,7 +25,7 @@ namespace StudentCRM.Repository.Implementation
             return entities.AsEnumerable();
         }
 
-        public T Get(Guid? id)
+        public T Get(int? id)
         {
             return entities.SingleOrDefault(s => s.Id == id);
         }
