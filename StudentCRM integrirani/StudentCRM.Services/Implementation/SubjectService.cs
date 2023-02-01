@@ -43,27 +43,7 @@ namespace StudentCRM.Services.Implementation
             this.subjectRepository.Delete(subject);
         }
 
-        List<Subject> ISubjectService.ListAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        Subject ISubjectService.FindById(Guid? id)
-        {
-            throw new NotImplementedException();
-        }
-
-        void ISubjectService.CreateNewSubject(Subject s)
-        {
-            throw new NotImplementedException();
-        }
-
-        void ISubjectService.UpdateExistingSubject(Guid id, string code, string subjectName)
-        {
-            throw new NotImplementedException();
-        }
-
-        void ISubjectService.DeleteSubject(Guid id)
+        public void UpdateExistingSubject(Guid id, string code, string subjectName)
         {
             throw new NotImplementedException();
         }
