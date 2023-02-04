@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentCRM.Domain.Identity
 {
-    public class ProfessorUser : IdentityUser
+    public class ProfessorUser : IdentityUser<int>
     {
         public long professorId { get; set; }
 

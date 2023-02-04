@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using StudentCRM.Domain;
 using StudentCRM.Domain.DomainModels;
@@ -7,7 +8,7 @@ using System;
 
 namespace StudentCRM.Repository
 {
-    public class ApplicationDbContext : IdentityDbContext<ProfessorUser>
+    public class ApplicationDbContext : IdentityDbContext<ProfessorUser, IdentityRole<int>, int>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
