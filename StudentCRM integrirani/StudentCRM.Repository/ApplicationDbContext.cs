@@ -23,12 +23,9 @@ namespace StudentCRM.Repository
                 .Property(z => z.Id)
                 .ValueGeneratedOnAdd();
 
-
-            //builder.Entity<Message>()
-            //    .Property(z => z.messageId)
-            //    .ValueGeneratedOnAdd();
-
-
+            builder.Entity<Message>()
+                .Property(z => z.Id)
+                .ValueGeneratedOnAdd();
 
             builder.Entity<Note>()
                 .Property(z => z.Id)
