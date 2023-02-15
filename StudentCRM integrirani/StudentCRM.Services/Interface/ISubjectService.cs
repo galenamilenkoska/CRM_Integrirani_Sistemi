@@ -10,9 +10,9 @@ namespace StudentCRM.Services.Interface
         List<Subject> ListAll();
         Subject FindById(int? id);
         void CreateNewSubject(Subject s);
-        void UpdateExistingSubject(int id, String code, String subjectName);
+        void UpdateExistingSubject(Subject subject);
         void DeleteSubject(int id);
+        void UpdateExistingSubject(int id, string code, string subjectName);
 
-        
     }
 }

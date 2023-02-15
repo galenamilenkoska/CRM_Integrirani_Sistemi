@@ -11,6 +11,10 @@ using StudentCRM.Domain;
 using StudentCRM.Domain.DomainModels;
 using StudentCRM.Domain.Identity;
 using StudentCRM.Repository;
+using StudentCRM.Repository.Interface;
+using StudentCRM.Repository.Implementation;
+using StudentCRM.Services.Implementation;
+using StudentCRM.Services.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,6 +41,10 @@ namespace StudentCRM_App
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddScoped<IStudentService, StudentService>();
+            services.AddScoped<IRepository<Student>, Repository<Student>>();
+            services.AddScoped<ISubjectService, SubjectService>();
+            services.AddScoped<IRepository<Subject>, Repository<Subject>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

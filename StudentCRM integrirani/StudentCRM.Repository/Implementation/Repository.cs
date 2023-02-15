@@ -8,7 +8,7 @@ using System.Text;
 
 namespace StudentCRM.Repository.Implementation
 {
-    class Repository<T> : IRepository<T> where T : BaseEntity
+    public class Repository<T> : IRepository<T> where T : BaseEntity
     {
         private readonly ApplicationDbContext context;
         private DbSet<T> entities;
