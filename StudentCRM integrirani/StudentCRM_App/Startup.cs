@@ -54,7 +54,17 @@ namespace StudentCRM_App
             services.AddScoped<IRepository<Student>, Repository<Student>>();
             services.AddScoped<ISubjectService, SubjectService>();
             services.AddScoped<IRepository<Subject>, Repository<Subject>>();
-            services.AddCors();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder =>
+                {
+                    builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+            });
+            services.AddControllers().AddNewtonsoftJson();
 
         }
 
@@ -92,6 +102,8 @@ namespace StudentCRM_App
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+            app.UseCors("CorsPolicy");
         }
     }
 }
