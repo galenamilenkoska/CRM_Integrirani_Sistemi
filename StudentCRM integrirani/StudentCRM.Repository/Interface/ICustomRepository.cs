@@ -12,5 +12,6 @@ namespace StudentCRM.Repository.Interface
         ProfessorSubject FindByProfessorAndSubject(ProfessorUser professor, Subject subject);
         List<ProfessorSubject> FindAllByProfessorAndSubject(ProfessorUser professor, Subject subject);
         List<Note> FindByStudentAndProfessor(int studentId, int professorId);
+        ProfessorUser FindByUsername(String username);
     }
 }

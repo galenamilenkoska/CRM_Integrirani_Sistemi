@@ -5,6 +5,7 @@ using StudentCRM.Repository.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 
 namespace StudentCRM.Repository.Implementation
@@ -12,6 +13,7 @@ namespace StudentCRM.Repository.Implementation
     public class CustomRepository : ICustomRepository
     {
         private readonly ApplicationDbContext context;
+        private readonly ICustomRepository customRepository;
 
         public CustomRepository(ApplicationDbContext context)
         {
@@ -42,6 +44,12 @@ namespace StudentCRM.Repository.Implementation
         public List<Note> FindByStudentAndProfessor(int studentId, int professorId)
         {
             return context.Set<Note>().Where(n => n.student.Id == studentId && n.professor.Id == professorId).ToList();
+        }
+        public ProfessorUser FindByUsername(String username)
+        {
+            return customRepository.FindByUsername(username);
+            
+
         }
     }
 }
