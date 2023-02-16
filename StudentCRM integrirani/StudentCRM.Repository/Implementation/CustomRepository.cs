@@ -37,6 +37,12 @@ namespace StudentCRM.Repository.Implementation
                 .Where(ps => ps.professor.Id == professor.Id && ps.subject.Id == subject.Id)
                 .ToList();
         }
+
+        //za notes
+        public List<Note> FindByStudentAndProfessor(int studentId, int professorId)
+        {
+            return context.Set<Note>().Where(n => n.student.Id == studentId && n.professor.Id == professorId).ToList();
+        }
     }
 }
 
