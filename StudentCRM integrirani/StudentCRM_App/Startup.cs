@@ -54,6 +54,8 @@ namespace StudentCRM_App
             services.AddScoped<IRepository<Student>, Repository<Student>>();
             services.AddScoped<ISubjectService, SubjectService>();
             services.AddScoped<IRepository<Subject>, Repository<Subject>>();
+            services.AddCors();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -77,6 +79,11 @@ namespace StudentCRM_App
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseCors(builder =>
+     builder.WithOrigins("http://localhost:4200")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
 
             app.UseEndpoints(endpoints =>
             {
