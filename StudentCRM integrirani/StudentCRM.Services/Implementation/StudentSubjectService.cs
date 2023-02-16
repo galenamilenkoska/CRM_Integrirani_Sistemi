@@ -11,20 +11,20 @@ namespace StudentCRM.Services.Implementation
     public class StudentSubjectService : IStudentSubjectService
     {
         private readonly IRepository<StudentSubject> studentSubjectRepository;
-        private readonly IStudentService studentService;
-        private readonly ISubjectService subjectService;
+        private readonly IRepository<Student> studentRepository;
+        private readonly IRepository<Subject> subjectRepository;
 
-        public StudentSubjectService(IRepository<StudentSubject> studentSubjectRepository, StudentService studentService, SubjectService subjectService)
+        public StudentSubjectService(IRepository<StudentSubject> studentSubjectRepository, IRepository<Student> studentRepository, IRepository<Subject> subjectRepository)
         {
             this.studentSubjectRepository = studentSubjectRepository;
-            this.studentService = studentService;
-            this.subjectService = subjectService;
+            this.studentRepository = studentRepository;
+            this.subjectRepository = subjectRepository;
         }
 
         public StudentSubject Create(int studentId, int subjectId)
         {
-            Student student = this.studentService.FindById(studentId);
-            Subject subject = this.subjectService.FindById(subjectId);
+            Student student = this.studentRepository.Get(studentId);
+            Subject subject = this.subjectRepository.Get(subjectId);
             StudentSubject studentSubject = new StudentSubject();
             studentSubject.student=student;
             studentSubject.subject=subject;
@@ -54,8 +54,8 @@ namespace StudentCRM.Services.Implementation
         public StudentSubject Update(int id, int studentId, int subjectId)
         {
             StudentSubject studentSubject = this.FindById(id);
-            Student student = this.studentService.FindById(studentId);
-            Subject subject = this.subjectService.FindById(subjectId);
+            Student student = this.studentRepository.Get(studentId);
+            Subject subject = this.subjectRepository.Get(subjectId);
             studentSubject.student = student;
             studentSubject.subject = subject;
             this.studentSubjectRepository.Insert(studentSubject);

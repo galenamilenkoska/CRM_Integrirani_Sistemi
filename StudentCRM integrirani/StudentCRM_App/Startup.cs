@@ -41,6 +41,15 @@ namespace StudentCRM_App
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<INoteService, NoteService>();
+            services.AddScoped<IRepository<Note>, Repository<Note>>();
+            services.AddScoped<IProfessorSubjectService, ProfessorSubjectService>();
+            services.AddScoped<IRepository<ProfessorSubject>, Repository<ProfessorSubject>>();
+            services.AddScoped<ICustomRepository, CustomRepository>();
+            services.AddScoped<IStudentSubjectService, StudentSubjectService>();
+            services.AddScoped<IRepository<StudentSubject>, Repository<StudentSubject>>();
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<IRepository<Student>, Repository<Student>>();
             services.AddScoped<ISubjectService, SubjectService>();

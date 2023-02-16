@@ -17,11 +17,9 @@ namespace StudentCRM.Services.Implementation
         private readonly IUserService professorService;
         private readonly ICustomRepository customRepository;
 
-        
-
         public ProfessorSubjectService(IRepository<ProfessorSubject> repository)
         {
-            this.repository=repository;
+            this.repository = repository;
         }
 
         public ProfessorSubject Create(int professorId, int subjectId, int studentSubjectId)
@@ -32,7 +30,7 @@ namespace StudentCRM.Services.Implementation
             ProfessorSubject professorSubject = new ProfessorSubject();
             professorSubject.professor = professor;
             professorSubject.subject = subject;
-            professorSubject.studentSubject= studentSubject;
+            professorSubject.studentSubject = studentSubject;
             this.repository.Insert(professorSubject);
             return professorSubject;
         }
@@ -81,6 +79,19 @@ namespace StudentCRM.Services.Implementation
             professorSubject.studentSubject = studentSubject;
             this.repository.Insert(professorSubject);
             return professorSubject;
+        }
+
+        public List<Subject> getLoggedProfSubjects(ProfessorUser professor)
+        {
+            List<Subject> subjects = new List<Subject>();
+            var professorSubjects = customRepository.FindAllByProfessor(professor);
+
+            foreach (var professorSubject in professorSubjects)
+            {
+                subjects.Add(professorSubject.subject);
+            }
+
+            return subjects.Distinct().ToList();
         }
     }
 }

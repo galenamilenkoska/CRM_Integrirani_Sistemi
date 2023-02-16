@@ -22,6 +22,6 @@ namespace StudentCRM.Services.Interface
         ProfessorSubject FindByProfessorAndSubject(ProfessorUser professor, Subject subject);
 
         List<ProfessorSubject> FindAllByProfessorAndSubject(ProfessorUser professor, Subject subject);
-
+        List<Subject> getLoggedProfSubjects(ProfessorUser professor);
     }
 }
